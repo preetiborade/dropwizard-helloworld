@@ -1,0 +1,86 @@
+WARN  [2014-03-12 18:03:57,998] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-03-12 18:03:58,160] com.yammer.dropwizard.cli.ServerCommand: Starting helloworld-service
+INFO  [2014-03-12 18:03:58,167] org.eclipse.jetty.server.Server: jetty-8.y.z-SNAPSHOT
+INFO  [2014-03-12 18:03:58,463] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-03-12 18:03:58,649] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /helloworld (edu.sjsu.cmpe.helloworld.api.resources.HelloWorldResource)
+
+INFO  [2014-03-12 18:03:58,649] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2014-03-12 18:03:59,345] org.eclipse.jetty.util.component.AbstractLifeCycle: FAILED InstrumentedBlockingChannelConnector@0.0.0.0:8080: java.net.BindException: Address already in use
+! java.net.BindException: Address already in use
+! at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0]
+! at sun.nio.ch.Net.bind(Net.java:414) ~[na:1.8.0]
+! at sun.nio.ch.Net.bind(Net.java:406) ~[na:1.8.0]
+! at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214) ~[na:1.8.0]
+! at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector.open(BlockingChannelConnector.java:127) ~[dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316) ~[dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector.doStart(BlockingChannelConnector.java:85) ~[dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at org.eclipse.jetty.server.Server.doStart(Server.java:291) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at com.yammer.dropwizard.cli.ServerCommand.run(ServerCommand.java:48) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at com.yammer.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:39) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at com.yammer.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:58) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at com.yammer.dropwizard.cli.Cli.run(Cli.java:53) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at com.yammer.dropwizard.Service.run(Service.java:61) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at edu.sjsu.cmpe.helloworld.HelloWorldService.main(HelloWorldService.java:13) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+WARN  [2014-03-12 18:03:59,347] org.eclipse.jetty.util.component.AbstractLifeCycle: FAILED SocketConnector@0.0.0.0:8081: java.net.BindException: Address already in use
+! java.net.BindException: Address already in use
+! at java.net.PlainSocketImpl.socketBind(Native Method) ~[na:1.8.0]
+! at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:382) ~[na:1.8.0]
+! at java.net.ServerSocket.bind(ServerSocket.java:375) ~[na:1.8.0]
+! at java.net.ServerSocket.<init>(ServerSocket.java:237) ~[na:1.8.0]
+! at java.net.ServerSocket.<init>(ServerSocket.java:181) ~[na:1.8.0]
+! at org.eclipse.jetty.server.bio.SocketConnector.newServerSocket(SocketConnector.java:96) ~[dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at org.eclipse.jetty.server.bio.SocketConnector.open(SocketConnector.java:85) ~[dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316) ~[dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at org.eclipse.jetty.server.bio.SocketConnector.doStart(SocketConnector.java:156) ~[dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at org.eclipse.jetty.server.Server.doStart(Server.java:291) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at com.yammer.dropwizard.cli.ServerCommand.run(ServerCommand.java:48) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at com.yammer.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:39) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at com.yammer.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:58) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at com.yammer.dropwizard.cli.Cli.run(Cli.java:53) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at com.yammer.dropwizard.Service.run(Service.java:61) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at edu.sjsu.cmpe.helloworld.HelloWorldService.main(HelloWorldService.java:13) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+WARN  [2014-03-12 18:03:59,348] org.eclipse.jetty.util.component.AbstractLifeCycle: FAILED org.eclipse.jetty.server.Server@53f0a4cb: MultiException[java.net.BindException: Address already in use, java.net.BindException: Address already in use]
+! org.eclipse.jetty.util.MultiException: Multiple exceptions
+! at org.eclipse.jetty.server.Server.doStart(Server.java:273) ~[dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) ~[dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at com.yammer.dropwizard.cli.ServerCommand.run(ServerCommand.java:48) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at com.yammer.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:39) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at com.yammer.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:58) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at com.yammer.dropwizard.cli.Cli.run(Cli.java:53) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at com.yammer.dropwizard.Service.run(Service.java:61) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at edu.sjsu.cmpe.helloworld.HelloWorldService.main(HelloWorldService.java:13) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+ERROR [2014-03-12 18:03:59,350] com.yammer.dropwizard.cli.ServerCommand: Unable to start server, shutting down
+! org.eclipse.jetty.util.MultiException: Multiple exceptions
+! at org.eclipse.jetty.server.Server.doStart(Server.java:273) ~[dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) ~[dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at com.yammer.dropwizard.cli.ServerCommand.run(ServerCommand.java:48) ~[dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at com.yammer.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:39) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at com.yammer.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:58) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at com.yammer.dropwizard.cli.Cli.run(Cli.java:53) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at com.yammer.dropwizard.Service.run(Service.java:61) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+! at edu.sjsu.cmpe.helloworld.HelloWorldService.main(HelloWorldService.java:13) [dropwizard-helloworld-0.0.1-SNAPSHOT.jar:na]
+INFO  [2014-03-12 18:03:59,351] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:8081
+INFO  [2014-03-12 18:03:59,356] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:8080
+INFO  [2014-03-12 18:03:59,358] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-03-12 18:03:59,359] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-03-12 18:04:01,361] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+INFO  [2014-03-12 18:04:01,361] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
